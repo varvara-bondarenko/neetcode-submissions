@@ -1,0 +1,16 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        count_dict = {}
+
+        for num in nums: 
+            if num not in count_dict: 
+                count_dict[num] = 1
+            else: 
+                count_dict[num] += 1
+            
+        for key, value in count_dict.items(): 
+            if value > 1: 
+                return True
+            
+        
+        return False
